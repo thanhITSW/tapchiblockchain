@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="TẠP CHÍ BLOCKCHAIN VIỆT NAM">
+    <meta property="og:description" content="TẠP CHÍ BLOCKCHAIN VIỆT NAM">
+    <meta property="og:image" content="/images/logo/logo.png">
+    <meta property="og:url" content="https://blockchainvietnam.online/">
+    <link rel="shortcut icon" href="/images/logo/logo.png" type="image/x-icon" id="pageTitle">
+    <title>Tạp chí Block Chain</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Bạn cũng cần bao gồm jQuery trước khi bao gồm slick-carousel -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- /* nav header */ -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            /* overflow-x: hidden; */
+            font-family: 'Times New Roman', Times, serif;
+            /* text-align: justify; */
+            /* letter-spacing: 2px; */
+        }
+
+        .row {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            padding: 10px;
+            font-size: 22px;
+            /* background-image: url(https://www.cryptotimes.io/wp-content/uploads/2022/06/Polygon-Claims-They-Have-Achieved-Carbon-Neutrality-Website.jpg); */
+
+            background-image: url(/images/back/3.jpg);
+            color: #fff;
+            background-size: cover;
+            /* font-family: Courier; */
+            font-weight: bold;
+        }
+
+        .navbar .nav-link a {
+            color: #fff;
+        }
+
+        /* .navbar-brand {
+            height: 30px;
+            width:300px;
+        } */
+
+        .navbar-brand img {
+            height: 2em;
+        }
+
+        .auth-container {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item li a {
+            float: right;
+        }
+
+        /* CSS để chỉnh màu chữ và hiệu ứng gạch dưới cho nav-bar */
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            position: relative;
+            text-decoration: #e0dab3 !important;
+        }
+
+        .navbar-nav .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            width: 0;
+            height: 5px;
+            background-color: #e0dab3;
+            transition: all 0.3s ease-in-out;
+            transform-origin: 50% 50%;
+            transform: scaleX(0);
+            /* Bắt đầu với chiều rộng là 0 */
+            border-radius: 10px;
+        }
+
+        .navbar-nav .nav-link:hover::before {
+            width: 100%;
+            transform: scaleX(1);
+            /* Khi di chuột vào, chiều rộng là 100% */
+        }
+
+        .navbar-nav .nav-link.active::before,
+        .navbar-nav .nav-link:hover::before {
+            width: 100%;
+            transform: scaleX(1);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            /* Tùy chỉnh kiểu chữ và màu sắc cho mục lục Navbar */
+            .navbar-nav .nav-item a {
+                font-family: 'Arial', sans-serif;
+                color: #f3e8b9;
+                z-index: 3;
+            }
+
+            .navbar {
+                background-image: url(/images/back/3.jpg);
+                background-size: cover;
+            }
+
+            .navbar-nav .nav-link {
+                color: #fff !important;
+                position: relative;
+                text-decoration: #fff !important;
+            }
+
+            .navbar-nav .nav-link::before {
+                content: '';
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                right: 0;
+                width: 0;
+                height: 5px;
+                background-color: #fff;
+                transition: all 0.3s ease-in-out;
+                transform-origin: 50% 50%;
+                transform: scaleX(0);
+                border-radius: 10px;
+            }
+
+            .navbar-nav .nav-link:hover::before {
+                width: 50%;
+                transform: scaleX(1);
+            }
+
+            .navbar-brand img {
+                height: 80px;
+
+            }
+
+            .navbar .navbar-toggler {
+                /* background-image: url(../pic/back/3.1.png);
+                background-size: cover; */
+                background: transparent;
+            }
+
+            .navbar .navbar-toggler-icon {
+                color: white;
+            }
+
+            .navbar .navbar-toggler-icon {
+                filter: brightness(1) invert(1);
+            }
+
+
+        }
+    </style>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* font-family: "Work Sans", sans-serif !important; */
+        }
+
+        h1 {
+            font-weight: 800;
+        }
+
+        hr {
+            background-color: #fff;
+        }
+
+        body {
+            background: url(/images/back/3.3.png);
+            background-size: cover;
+            color: #fff;
+        }
+
+        /* Custom styles for the page */
+        .author-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+        }
+
+        .post-date,
+        .view-count {
+            margin-left: auto;
+            margin-right: 15px;
+        }
+
+        .post-image {
+            max-width: 100%;
+            width: 100%;
+            height: 700px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .container p {
+            text-align: justify;
+            font-size: 20px;
+            font-family: "Work Sans", sans-serif !important;
+            text-wrap: stable;
+        }
+
+        @media (max-width:576px) {
+            .post-image {
+                max-width: 100%;
+                width: 100%;
+                height: 250px;
+                display: block;
+                margin: 20px auto;
+                border-radius: 10px;
+            }
+        }
+
+        .share-div {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            align-items: center;
+        }
+
+        .share-icons {
+            display: flex;
+        }
+
+        .share-icons a {
+            margin-right: 10px;
+            color: #fff;
+            /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8); */
+
+            border-radius: 80%;
+            background: url(/images/back/3.1.png);
+            padding: 15px;
+            display: inline-block;
+        }
+
+        .share-icons i {
+            border-radius: 70%;
+            font-size: 30px;
+            background-image: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: neon-glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes neon-glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.3);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .article-links {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .article-links a {
+            display: block;
+            margin-top: 10px;
+            position: relative;
+            padding-left: 30px;
+            /* Khoảng cách giữa icon và nội dung */
+            text-align: justify;
+        }
+
+        .article-links a:before {
+            content: '\25B6';
+            /* Unicode character for a right-pointing triangle */
+            position: absolute;
+            left: 0;
+            color: #555;
+
+        }
+
+        .col-md-20 {
+            background: url(/images/back/3.3.png);
+            background-size: cover;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .breadcrumb {
+            background: transparent;
+            background-size: cover;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .breadcrumb-item a {
+            color: #fff;
+            font-weight: 700;
+        }
+    </style>
+
+    <style>
+        .card .article-links {
+            margin-bottom: 20px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .card-body {
+            background-size: cover;
+            background: url(/images/back/6.avif);
+        }
+
+        .card-body .card-title {
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        .card-body a {
+            background-size: cover;
+            background: url(/images/back/3.2.png);
+            font-weight: 700;
+            width: 100%;
+        }
+
+        .card-footer {
+            background-size: cover;
+            background: url(/images/back/3.2.png);
+            font-weight: 700;
+        }
+
+        .card-footer .float-right {
+            margin-top: 5px;
+        }
+
+        .avatar {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap");
+
+        section {
+            position: relative;
+            width: 100%;
+            min-height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background: #2196f3; */
+            overflow: hidden;
+        }
+
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            width: 300px;
+            height: 400px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            filter: blur(1px);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: self-start;
+        }
+
+        .swiper-slide-active {
+            filter: blur(0px);
+        }
+
+        .swiper-pagination-bullet,
+        .swiper-pagination-bullet-active {
+            background: #fff;
+        }
+
+        .swiper-slide span {
+            text-transform: uppercase;
+            color: #fff;
+            background: #1b7402;
+            padding: 7px 18px 7px 25px;
+            display: inline-block;
+            border-radius: 0 20px 20px 0px;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .swiper-slide--one span {
+            background: #62667f;
+        }
+
+        .swiper-slide--two span {
+            background: #087ac4;
+        }
+
+        .swiper-slide--three span {
+            background: #b45205;
+        }
+
+        .swiper-slide--four span {
+            background: #087ac4;
+        }
+
+        .swiper-slide h2 {
+            color: #fff;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 1.3rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            padding: 25px 45px 0 25px;
+        }
+
+        .swiper-slide p {
+            color: #fff;
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            padding: 0 25px 35px 25px;
+        }
+
+        .swiper-slide svg {
+            color: #fff;
+            width: 22px;
+            height: 22px;
+            margin-right: 7px;
+        }
+
+        .swiper-slide--one {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+                url(https://zgwebsite.blob.core.windows.net/zg-website-media/2023/12/Viec-mua-Bitcoin-cua-MicroStrategy-thuc-day-thi-truong.jpg) no-repeat 50% 50% / cover;
+        }
+
+        .swiper-slide--two {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+                url(https://zgwebsite.blob.core.windows.net/zg-website-media/2023/12/ETF.jpg) no-repeat 50% 50% / cover;
+        }
+
+        .swiper-slide--three {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+                url(https://zgwebsite.blob.core.windows.net/zg-website-media/2023/12/Anh-ZG-5.jpg) no-repeat 50% 50% / cover;
+        }
+
+        .swiper-slide--four {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+                url(https://zgwebsite.blob.core.windows.net/zg-website-media/2023/12/Bitcoin-65877523c43c8.jpg) no-repeat 50% 50% / cover;
+        }
+
+        .swiper-slide--five {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+                url(https://zgwebsite.blob.core.windows.net/zg-website-media/2023/12/Bitcoin-658771a074738.jpg) no-repeat 50% 50% / cover;
+        }
+
+        .swiper-3d .swiper-slide-shadow-left,
+        .swiper-3d .swiper-slide-shadow-right {
+            background-image: none;
+        }
+    </style>
+
+    <!-- /* Phần 11 */ -->
+    <style>
+        .footer {
+            /* background-color: #f8f9fa; */
+            /* Màu nền của footer */
+            padding: 10px;
+            /* Khoảng cách padding trên và dưới */
+            margin-left: 0;
+            /* Loại bỏ khoảng trắng bên trái */
+            margin-right: 0;
+            /* Loại bỏ khoảng trắng bên phải */
+            margin: 0;
+            text-align: justify;
+
+            background: url(/images/back/3.2.png);
+            background-size: cover;
+        }
+
+
+        .footer h3 {
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .footer-logo {
+            max-width: 300px;
+            /* Kích thước tối đa của logo */
+        }
+
+        .social-icons a {
+            margin-right: 10px;
+            /* Khoảng cách giữa các biểu tượng social */
+            color: #007bff;
+            /* Màu của biểu tượng social */
+        }
+
+        /* Responsive styling */
+        @media (max-width: 767px) {
+            .footer {
+                text-align: center;
+                /* Canh giữa nội dung ở màn hình nhỏ hơn */
+            }
+
+
+            .footer p {
+                text-align: justify;
+            }
+
+            .text-right {
+                text-align: center !important;
+                /* Canh giữa nội dung phần bên phải */
+            }
+        }
+    </style>
+
+    <style>
+        .card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .overlay h5 {
+            margin: 0;
+            padding: 10px;
+        }
+
+        .overlay p {
+            margin: 0;
+            padding: 30px;
+            font-size: 25px;
+        }
+
+        .overlay a {
+            background: url(/images/back/3.1.png);
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        @media (max-width:576px) {
+            .overlay p {
+                margin: 0;
+                padding: 10px;
+                font-size: 20px;
+            }
+        }
+    </style>
+
+    <style>
+        .col-md-20 h4 {
+            position: relative;
+            padding-left: 20px;
+            /* Khoảng cách giữa dấu chấm tròn và văn bản */
+        }
+
+        .col-md-20 h4::before {
+            content: "\2022";
+            /* Mã Unicode cho dấu chấm tròn • */
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            /* Màu của dấu chấm tròn */
+            font-size: 30px;
+            /* Kích thước của dấu chấm tròn */
+            margin-right: 10px;
+            /* Khoảng cách giữa dấu chấm tròn và văn bản */
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Phần Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="user-menu">
+            <div class="logo">
+                <a class="navbar-brand" href="/"><img src="/images/logo/logo-doc-4330 - Copy copy.png" alt="Logo"></a>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color:white"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" style="color:#333"><i class="fas fa-home"></i> Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:#333"><i class="fas fa-newspaper"></i> Tin Tức</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:#333"><i class="fas fa-cube"></i> Blockchain</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:#333"><i class="fab fa-btc"></i> Crypto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:#333"><i class="fas fa-chart-bar"></i> Tài Chính</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:#333"><i class="far fa-calendar-alt"></i> Sự Kiện</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:#333"><i class="fas fa-phone"></i> Liên Hệ</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Thêm JavaScript để giữ thanh Navbar sticky -->
+    <script>
+        // Sử dụng jQuery
+        $(document).ready(function() {
+            var navbar = $('.navbar');
+            var sticky = navbar.offset().top;
+
+            $(window).scroll(function() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.addClass('sticky-top');
+                } else {
+                    navbar.removeClass('sticky-top');
+                }
+            });
+        });
+    </script>
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Trang Chủ</a></li>
+                <% if(topic.category == 'sukiennoibat') {%>
+                    <li class="breadcrumb-item"><a href="#">Sự Kiện Nổi Bật</a></li>
+                <% } %>
+
+                <% if(topic.category == 'tintuchangngay') {%>
+                    <li class="breadcrumb-item"><a href="#">Tin Tức Hàng Ngày</a></li>
+                <% } %>
+
+                <% if(topic.category == 'bantin') {%>
+                    <li class="breadcrumb-item"><a href="#">Bản Tin Block Chain</a></li>
+                <% } %>
+
+                <li class="breadcrumb-item active" aria-current="page" style="color:#fff"><%= topic.topic %></li>
+            </ol>
+        </nav>
+
+        <h1><%= topic.topic %></h1>
+
+        <div class="author-info">
+
+            <span>Được tạo bởi: <img src="/images/logo/logo.png" alt="Avatar" class="author-avatar">
+                <span style="font-weight: 900; margin-right: 15px;">Tạp Chí BlockChain Việt Nam</span>
+                Ngày: <span style="font-weight: 900; margin-right: 15px;"><%= topic.time %></span>
+                <i class="fas fa-eye"></i> Lượt xem: <span style="font-weight: 900; margin-right: 15px;"><%= topic.view %></span>
+            </span>
+        </div>
+
+        <%- topic.content %>
+        <div class="share-div">
+            <h4>Chia sẻ: </h4>
+            <div class="share-icons">
+                <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="article-links">
+            <% let count = 0; %>
+            <% let topicTime =  topics.sort((a, b) => {
+                const dateA = a.time.split('/').reverse().join('/');
+                const dateB = b.time.split('/').reverse().join('/');
+                return new Date(dateB) - new Date(dateA);
+            });%>
+            <% topicTime.forEach(topic => {%>
+                <% if(count < 5) {%>
+                    <a href="/<%= topic._id %>"> <%= topic.time %> - <%= topic.topic %> </a>
+                    <% count++ %>
+                <% } %>            
+            <% }) %>
+        </div>
+
+        <div class="container">
+            <h4>Nội Dung Dành Cho Bạn</h4>
+
+            <div class="row">
+
+                <% let view = 0; %>
+                <% let topicView = topics.sort((a, b) => b.view - a.view) %>
+                <% topicTime.forEach(topic => {%>
+                    <% if(view < 4) {%>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <a href="#" >
+                                    <img src="<%= topic.banner %>" class="card-img-top" alt="Image">
+                                </a>
+                                <div class="overlay">
+                                    <h5 class="card-title"><%= topic.topic %></h5>
+                                    <p class="card-text"><%= topic.description %></p>
+                                    <a href="/<%= topic._id %>" class="btn btn-primary" >Đọc thêm</a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= topic.topic %></h5>
+                                    <!-- <p class="card-text">Nội dung bài viết 1...</p>
+                                    <a href="#" class="btn btn-primary">Đọc thêm</a> -->
+                                </div>
+                                <div class="card-footer">
+                                    <img src="/images/logo/logo.png" alt="Avatar" class="avatar">
+                                    <span class="ml-2">Tạp Chí BlockChain Việt Nam</span>
+                                    <span class="float-right"><%= topic.time %></span>
+                                </div>
+                            </div>
+                        </div>
+                        <% view++ %>
+                    <% } %>            
+                <% }) %>
+                
+            </div>
+
+                <!-- <section>
+                    <div class="swiper">
+                        <h4>Tin Mới Đăng</h4>
+
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide--one">
+                                <span>Công Nghệ</span>
+                                <div>
+                                    <h2>Giải thích về mô hình đăng ký thành viên của công nghệ NFT</h2>
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                        12/01/2024, Việt Nam
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide--two">
+                                <span>Blockchain</span>
+                                <div>
+                                    <h2>Việc mua Bitcoin của MicroStrategy thúc đẩy thị trường</h2>
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                        12/01/2024, Việt Nam
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide swiper-slide--three">
+                                <span>Sự Kiện</span>
+                                <div>
+                                    <h2>Các quỹ Spot Bitcoin ETF sẵn sàng cách mạng hóa bối cảnh đầu tư tiền điện tử</h2>
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                        12/01/2024, Việt Nam
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide swiper-slide--four">
+                                <span>Tin Tức</span>
+                                <div>
+                                    <h2>Acala Động Thái Chiến Lược để Kích Thích Đổi Mới DeFi</h2>
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                        12/01/2024, Việt Nam
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide swiper-slide--five">
+                                <span>Blockchain</span>
+                                <div>
+                                    <h2>Ethereum ở Ngã Ba: Đối Mặt với Thách Thức Trong Bối Cảnh Solana Nổi Lên</h2>
+                                    <p>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                        </svg>
+                                        12/01/2024, Việt Nam
+                                    </p>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- Add Pagination -->
+                        <!-- <div class="swiper-pagination"></div>
+                    </div>
+                </section> -->
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Phần bên trái -->
+                <div class="col-md-4">
+                    <img src="/images/logo/logo-doc-4330 - Copy copy.png" alt="Logo" class="footer-logo">
+                    <span class="ml-2">@2024, Tạp chí Blockchain Việt Nam</span>
+                </div>
+
+                <!-- Phần giữa -->
+                <div class="col-md-4 text-center">
+                    <!-- Thông tin liên lạc -->
+                    <h3>Mọi thắc mắc xin vui lòng liên hệ:</h3>
+                    <p>27 Hoàng Hoa Thám, Phường 6, Quận Bình Thạnh, Thành Phố Hồ Chí Minh</p>
+                    <p>Số điện thoại: 0961967543</p>
+                    <p>Website: https://blockchainvietnam.online</p>
+
+                    <!-- Icon social -->
+                    <div class="col-md-8 share-icons">
+                        <a href="https://www.facebook.com/blockchainvietnam.vn" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <!-- Phần bên phải -->
+                <div class="col-md-4 text-center">
+                    <h3>Về chúng tôi</h3>
+                    <p> Chào mừng bạn đến với Tạp chí Blockchain Việt Nam, nguồn thông tin hàng đầu về công nghệ Blockchain tại Việt Nam. Chúng tôi cung cấp những bài viết chất lượng, phân tích chuyên sâu và tin tức mới nhất về thị trường Blockchain. Đồng hành cùng cộng đồng với sự đổi mới, phát triển và ứng dụng Blockchain trong nền kinh tế số Việt Nam.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap JS and Popper.js links -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true
+            },
+            keyboard: {
+                enabled: true
+            },
+            mousewheel: {
+                thresholdDelta: 70
+            },
+            spaceBetween: 60,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        });
+    </script>
+
+    <!-- khóa chế độ xem chiều ngang trên điện thoại -->
+    <script>
+        window.addEventListener("orientationchange", function() {
+            if (window.orientation === 90 || window.orientation === -90) {
+                alert("Chế độ xem chiều ngang bị khóa!");
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const cardTextElements = document.querySelectorAll('.card-text');
+            const maxLength = 150; // Số ký tự tối đa
+
+            cardTextElements.forEach(function(element) {
+                let text = element.textContent;
+                if (text.length > maxLength) {
+                    element.textContent = text.substring(0, maxLength) + '...';
+                }
+            });
+        });
+
+        window.addEventListener("load", function(){
+            var pathname = window.location.pathname;
+            var lastSegment = pathname.split('/').pop();
+            const options = {
+                method: 'POST', // Kiểu phương thức là PATCH
+                headers: {
+                    'Content-Type': 'application/json' // Đặt header Content-Type
+                }
+            };
+
+            fetch(`/updateView/${lastSegment}`, options)
+            .then(response => {
+                if (!response.ok) {
+                // Xử lý lỗi nếu phản hồi không thành công
+                throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json(); // Giả sử phản hồi là JSON
+            })
+            .then(data => {
+                console.log('Success:', data); // Xử lý dữ liệu phản hồi thành công
+            })
+            .catch(error => {
+                console.error('Error:', error); // Xử lý lỗi ở đây
+            });
+        })
+    </script>
+
+    <!-- Chức năng chặn kiểm tra code cơ bản -->
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+
+    <!-- Chặn ctrl+u -->
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+    <!-- Chặn ctrl+shift+I -->
+    <script>
+        // Chặn sự kiện mở Developer Tools
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
+                e.preventDefault();
+            }
+        });
+
+        // Chặn chuột phải
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+
+</body>
+
+</html>
