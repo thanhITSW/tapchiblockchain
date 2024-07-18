@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 require('dotenv').config()
 const cors = require('cors')
-const session = require('cookie-session');
+const session = require('express-session')
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser')
 const flash = require('express-flash')
