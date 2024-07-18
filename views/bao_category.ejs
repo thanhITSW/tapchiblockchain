@@ -278,13 +278,13 @@
                                     <div class="blog-img-inner">
                                         <img class="img-fluid w-100 rounded-top" src="<%= topic.banner %>" alt="Image">
                                         <div class="blog-icon">
-                                            <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
+                                            <a href="/<%= topic.category %>/<%= topic._id %>" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
                                         </div>
                                     </div>
                                     <div class="blog-info d-flex align-items-center border border-start-0 border-end-0">
                                         <small class="flex-fill text-center border-end py-2"><i
                                                 class="fa fa-calendar-alt me-2" style="color:#ffb600"></i><%= topic.time %></small>
-                                        <a href="#" class="btn-hover flex-fill text-center text-white border-end py-2"><i
+                                        <a class="btn-hover flex-fill text-center text-white border-end py-2"><i
                                                 class="fa fa-eye" style="color:#ffb600"></i>
                                                 <% if(topic.view > 999) {%>
                                                     <%= topic.view / 1000 %>K
@@ -292,7 +292,7 @@
                                                     <%= topic.view %>
                                                 <% } %>                                                
                                             </a>
-                                        <a href="#" class="btn-hover flex-fill text-center text-white py-2"><i
+                                        <a class="btn-hover flex-fill text-center text-white py-2"><i
                                                 class="fa fa-comments me-2" style="color:#ffb600"></i>
                                                 <% if(topic.comment > 999) {%>
                                                     <%= topic.comment / 1000 %>K
@@ -304,7 +304,7 @@
                                 </div>
                                 <div class="blog-content border border-top-0 rounded-bottom p-4">
                                     <p class="mb-3">Được Tạo bởi: VDS - Tạp Chí Blockchain Việt Nam </p>
-                                    <a href="#" class="h4"><%= topic.topic %></a>
+                                    <a href="/<%= topic.category %>/<%= topic._id %>" class="h4"><%= topic.topic %></a>
                                     <p class="my-3"><%= topic.description %> </p>
                                     <a href="/<%= topic.category %>/<%= topic._id %>" class="btn btn-primary py-2 px-4">ĐỌC THÊM</a>
                                 </div>
