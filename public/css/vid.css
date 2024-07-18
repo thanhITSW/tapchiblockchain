@@ -1,0 +1,148 @@
+.recent-articles .recent-wrapper {
+    margin-bottom: 23px
+}
+
+.recent-articles .single-recent {
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px
+}
+
+.recent-articles .single-recent .what-img img {
+    border-radius: 6px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.recent-articles .single-recent .what-cap {
+    padding: 20px 20px 10px 10px;
+    background: #fff;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 80%;
+    border-radius: 0 7px 0 0;
+    -webkit-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    -ms-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s
+}
+
+.recent-articles .single-recent .what-cap h4 {
+    font-size: 18px
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .recent-articles .single-recent .what-cap h4 {
+        font-size: 16px
+    }
+}
+
+@media (max-width: 575px) {
+    .recent-articles .single-recent .what-cap h4 {
+        font-size: 13px
+    }
+}
+
+.recent-articles .single-recent .what-cap h4 a {
+    font-weight: 700;
+    line-height: 1.4
+}
+
+.recent-articles .single-recent .what-cap h4 a:hover {
+    color: #ff2143
+}
+
+.recent-articles .single-recent P {
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    display: inline-block
+}
+
+.recent-articles .single-recent span {
+    color: #7a8496;
+    position: absolute;
+    right: 20px;
+    bottom: 2px;
+    font-size: 30px;
+    cursor: pointer
+}
+
+.recent-articles .slick-arrow {
+    background: none;
+    border: none;
+    position: absolute;
+    bottom: -87px;
+    text-align: center;
+    left: 0;
+    right: -85px;
+    margin: auto;
+    font-size: 46px;
+    cursor: pointer;
+    color: #ff0b0b;
+    -webkit-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    -ms-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s
+}
+
+.recent-articles .slick-prev.slick-arrow {
+    transform: rotate(180deg);
+    left: -172px;
+    color: #ddd
+}
+
+.recent-articles .slick-prev.slick-arrow:hover {
+    color: red
+}
+
+.youtube-area {
+    background: #f4f4f4
+}
+
+.youtube-area .video-items video {
+    width: 100%
+}
+
+.youtube-area .video-info .video-caption {
+    position: relative
+}
+
+.youtube-area .video-info .video-caption .top-caption {
+    background: #fff;
+    width: 60%;
+    border-radius: 0 7px 0 0;
+    padding-top: 60px;
+    padding-bottom: 30px
+}
+
+.youtube-area .video-info .video-caption .top-caption span {
+    padding: 7px 30px;
+    line-height: 1;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px
+}
+
+.youtube-area .single-video {
+    padding: 0 15px;
+    width: 100%;
+}
+
+.youtube-area .single-video .video-intro h4 {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0 5px;
+    line-height: 1.4
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .youtube-area .single-video .video-intro h4 {
+        font-size: 14px
+    }
+}

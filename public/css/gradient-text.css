@@ -1,0 +1,122 @@
+.gradient-text {
+    background-image: linear-gradient(to bottom, rgb(0, 255, 55), rgb(254, 254, 0));
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: bolder;
+}
+
+.gradient-text1 {
+    background-image: linear-gradient(to bottom, rgb(255, 169, 39), rgb(246, 254, 0));
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: bolder;
+}
+
+.gradient-text2 {
+    background-image: linear-gradient(to right, rgb(241, 255, 39), rgb(255, 255, 255), rgb(241, 255, 39));
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: bolder;
+}
+
+.gradient-text3 {
+    background-image: linear-gradient(to right, rgb(241, 255, 39), rgb(255, 255, 255), rgb(241, 255, 39));
+
+    /* background-image: linear-gradient(to right, rgb(11, 194, 87), rgb(11, 114, 13), rgb(12, 186, 84)); */
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font: bolder 1.4em tahoma, arial, sans-serif;
+    text-shadow: 2px 2px 3px rgba(88, 148, 117, 0.991);
+
+    /* text-shadow: 2px 2px 3px rgba(11, 81, 21, 0.644); */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    /* color:aliceblue; */
+}
+
+.gradient-text4 {
+    background-image: linear-gradient(to right, rgb(11, 194, 87), rgb(11, 114, 13), rgb(12, 186, 84));
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font: bolder 1.2em tahoma, arial, sans-serif;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+
+.gradient-text::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    z-index: -1;
+    border-radius: 2px;
+}
+
+.gradient-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: -2;
+    border-radius: 2px;
+}
+
+
+/*.... */
+/* h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 20px;
+    color: #000;
+    position: relative;
+}
+
+.glossy-text {
+    background: linear-gradient(to bottom, rgb(109, 225, 103) 0%, rgb(212, 175, 55) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.glossy-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+    -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+    mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.glossy-text::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: inherit;
+    z-index: -1;
+    filter: blur(5px);
+    opacity: 0.5;
+} */

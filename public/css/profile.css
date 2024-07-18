@@ -1,0 +1,77 @@
+#leftPanel{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(151, 59, 19, 0.3)), url('https://static.vecteezy.com/system/resources/previews/003/580/716/non_2x/abstract-black-metallic-polygon-yellow-light-futuristic-technology-design-background-vector.jpg');
+    color:#fff;
+    text-align: center;
+    border-radius: 10px;
+    border:3px solid #fecf71;
+    padding:20px;
+}
+
+#leftPanel button {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(151, 59, 19, 0.3)), url('https://static.vecteezy.com/system/resources/previews/003/580/716/non_2x/abstract-black-metallic-polygon-yellow-light-futuristic-technology-design-background-vector.jpg');
+    color:#fff;
+    text-align: center;
+    border-radius: 10px;
+    border:3px solid #fecf71;
+}
+
+@media (max-width:600px) {
+    #leftPanel {
+        margin-bottom: 20px;
+    }
+
+    .btn-lg {
+        padding:30px;
+        font-size: 1.2em;
+    }
+
+    #changePasswordModal {
+        margin-top: 100px;
+    }
+}
+
+
+
+#rightPanel{
+    min-height:400px;
+}
+
+#rightPanel .btn{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(151, 59, 19, 0.3)), url('https://static.vecteezy.com/system/resources/previews/003/580/716/non_2x/abstract-black-metallic-polygon-yellow-light-futuristic-technology-design-background-vector.jpg');
+    color:#fff;
+    text-align: center;
+    border-radius: 10px;
+    border:3px solid #fecf71;
+}
+
+#changePasswordModal .modal-dialog .modal-content{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(151, 59, 19, 0.3)), url('https://static.vecteezy.com/system/resources/previews/003/580/716/non_2x/abstract-black-metallic-polygon-yellow-light-futuristic-technology-design-background-vector.jpg');
+    color:#fff;
+    border-radius: 10px;
+    border:3px solid #fecf71;
+}
+
+.modal-title {
+    color:#fff;
+}
+
+.modal-content label {
+    font-weight: bold;
+}
+
+.btn-lg {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.img-circle{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin:30px;
+    border:3px solid #fecf71;
+    color:#fff
+
+}
+
+

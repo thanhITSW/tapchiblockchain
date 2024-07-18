@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="TẠP CHÍ BLOCKCHAIN VIỆT NAM">
+    <meta property="og:description" content="TẠP CHÍ BLOCKCHAIN VIỆT NAM">
+    <meta property="og:image" content="/img/logoct/lglink.png">
+    <meta property="og:url" content="https://blockchainvietnam.online/">
+    <title>TẠP CHÍ BLOCKCHAIN VIỆT NAM</title>
+    <link rel="shortcut icon" href="/img/logo/logo.png" type="image/x-icon" id="pageTitle">
+
+    <link rel="stylesheet" href="/css/dndk.css">
+
+</head>
+
+<body>
+    <section>
+
+        <div class="box">
+
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="square" style="--i:5;"></div>
+
+            <div class="container">
+                <div class="form">
+                    <img src="/img/logo/logo-doc-4330-copy-9044.png" height="150" width="auto"
+                        class="justify-content-center">
+
+                    <h2 class="text-center">ĐĂNG KÝ VDS</h2>
+                    <form action="/register" method="post" id="registerForm">
+                        <div class="inputBx">
+                            <input type="text" required="required" name="name" id="name">
+                            <span>Họ và Tên</span>
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="inputBx">
+                            <input type="text" required="required" name="phone" id="phone">
+                            <span>Số Điện Thoại</span>
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="inputBx">
+                            <input type="email" required="required" name="email" id="email">
+                            <span>Email</span>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="inputBx password">
+                            <input id="password" type="password" name="password" required="required">
+                            <span>Nhập Mật Khẩu</span>
+                            <a href="#" class="password-control"
+                                onclick="return show_hide_password('#password-input', this);"></a>
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="inputBx password">
+                            <input id="repassword" type="password" name="repassword" required="required">
+                            <span>Nhập lại Mật Khẩu</span>
+                            <a href="#" class="password-control"
+                                onclick="return show_hide_repassword('#repassword-input', this);"></a>
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div style="position: relative; width: 100%; height: 5vh; margin-top: 4px; margin-bottom: 10px;">
+                            <div id="errorMessage" style="display:none; color:red; font-size: 30px;; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap;"></div>
+                            <div id="successMessage" style="display: none; color: white; font-size: 15px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap;">
+                            </div>
+                        </div>
+                        <button type="submit" class="inputBx dn"
+                            style="display: inline-block; text-align: center; text-decoration: none;">
+                            <div
+                                style="border-radius:10px; border:3px solid #ffce0b; background: linear-gradient(115deg, rgba(142, 247, 72, 0.2), rgba(178, 150, 10, 0.836)), url('/img/back/hexagon-background-5w9ol0kjf6k2056p.png'); font-weight: bold; color:#f4ff2d; padding: 10px; cursor: pointer;">
+                                ĐĂNG KÝ
+                            </div>
+                        </button>
+                    </form>
+                    <p>Đã có Tài khoản? <a href="/login">Đăng Nhập</a></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="/js/security.js"></script>
+
+    <script src="/js/account/register.js"></script>
+
+</body>
+
+</html>

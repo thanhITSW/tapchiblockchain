@@ -1,0 +1,63 @@
+/* CSS cho section 10 */
+.container-section10 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-section10 h2 {
+    width: 100%;
+    text-align: center;
+    /* background: rgba(64, 64, 64, 0.2); */
+    color: #333;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Tahoma;
+
+    /* font-family: Courier; */
+    font-size: 40px;
+
+    background-image: url('./pic/IoT-in-Agriculture-1024x631.jpg');
+    background-size: cover;
+    height: 80px;
+    text-transform: uppercase;
+}
+
+
+.imgnd-tieude2 {
+    width: 200px;
+    /* Điều chỉnh kích thước của logo */
+    height: auto;
+    margin: 10px;
+    /* Khoảng cách giữa các logo */
+}
+
+/* Media query cho section 10 */
+@media (max-width: 768px) {
+    .container-section10 {
+        flex-direction: row;
+    }
+
+    .imgnd-tieude2 {
+        flex: 0 0 calc(30% - 20px);
+        /* Chia 1/2 chiều rộng và trừ khoảng cách giữa các hình */
+        max-width: calc(30% - 20px);
+        /* Tối đa chiều rộng cho từng hình */
+    }
+
+    .imgnd-tieude2 img {
+        width: 40px;
+        /* Điều chỉnh kích thước của logo */
+        height: auto;
+        margin: 10px;
+        /* Khoảng cách giữa các logo */
+    }
+
+    .container-section10 h2 {
+        font-size: 30px;
+        height: 100px;
+    }
+}

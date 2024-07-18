@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="TẠP CHÍ BLOCKCHAIN VIỆT NAM">
+    <meta property="og:description" content="TẠP CHÍ BLOCKCHAIN VIỆT NAM">
+    <meta property="og:image" content="/img/logoct/lglink.png">
+    <meta property="og:url" content="https://blockchainvietnam.online/">
+    <title>TẠP CHÍ BLOCKCHAIN VIỆT NAM</title>
+    <link rel="shortcut icon" href="/img/logo/logo.png" type="image/x-icon" id="pageTitle">
+
+    <!-- CSS
+================================================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Animation -->
+    <link rel="stylesheet" href="plugins/animate-css/animate.css">
+    <!-- slick Carousel -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+    <!-- Colorbox -->
+    <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/https://themewagon.github.io/aznews/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template styles-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/new.css">
+
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/menucon.css">
+    <link rel="stylesheet" href="css/imghover.css">
+    <link rel="stylesheet" href="css/profile.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="body-inner">
+        <header>
+            <div class="header-area">
+              <div class="header-top_area">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="header_top_wrap d-flex justify-content-between align-items-center">
+                        <div class="text_wrap">
+                          <div class="col-md-12 text-center text-white">
+                            <i class="fa fa-calendar-alt"></i>
+                            <span id="current-date"></span>
+                            |
+                            <!-- <div id="clock-divider"></div> -->
+      
+                            <i class="fa fa-clock"></i>
+                            <span id="current-time"></span>
+                          </div>
+                        </div>
+                        <div class="text_wrap">
+                          <% if(user.active == true || user.active == false) {%>
+                            <div class="user-menu">
+                              <div class="user-avatar">
+                                <img src="<%= user.avatar == null ? '/img/user/user.jpg' : user.avatar %>" alt="User Avatar" id="avatar">
+                                <span class="user-name"><%= user.name %></span>
+                                <i class="fa fa-caret-down"></i>
+                              </div>
+                              <div class="dropdown-content-user">
+                                <a href="/account"> <i class="fa fa-user"></i>
+                                  Thông tin tài khoản</a>
+                                <a href="/logout"> <i class="fa fa-sign-out-alt"></i>
+                                  Đăng xuất</a>
+                              </div>
+                            </div>
+        
+                          <% }else {%>
+                            <p>
+                              <a href="/login">
+                                <i class="fa fa-user"></i>
+                                Login
+                              </a>
+                              <a href="/register">
+                                <i class="fa fa-user-plus"></i>
+                                Register
+                              </a>
+                            </p>
+                          <% } %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <header id="header" class="header-one">
+                <div class="site-navigation">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                          <a class="d-block" href="/">
+                            <img loading="lazy" src="/img/logo/logo-doc-4330 - Copy.png" alt="VDS"
+                              style="height:100px; margin-right: 20px;">
+                          </a>
+      
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
+                            aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+      
+                          <div id="navbar-collapse" class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav ml-auto">
+                              <li class="nav-item active">
+                                <a class="nav-link" href="/">
+                                  <i class="fa fa-home"></i>
+                                  Trang Chủ
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/news"><i class="fa fa-newspaper"></i>
+                                  Tin Tức</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/blockchain"><i class="fas fa-cube"></i>
+                                  Blockchain</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/crypto"><i class="fab fa-btc"></i>
+                                  Crypto</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/finance"><i class="fa fa-money-bill-alt"></i>
+                                  Tài Chính</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/event"><i class="fa fa-calendar-alt"></i>
+                                  Sự Kiện</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/contact"><i class="fa fa-envelope"></i>
+                                  Liên Hệ</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </nav>
+                      </div>
+                      <!--/ Col end -->
+                    </div>
+                    <!--/ Row end -->
+                  </div>
+                  <!--/ Container end -->
+                </div>
+                <!--/ Navigation end -->
+              </header>
+            </div>
+          </header>
+      
+          <!-- Features Start -->
+          <div class="container-fluid features mb-5">
+            <div class="container py-5">
+              <div class="row g-4">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                  <div class="row g-4 align-items-center features-item">
+                    <div class="col-4">
+                      <div class="rounded-circle position-relative">
+                        <div class="overflow-hidden rounded-circle">
+                          <img src="/img/icongiatri/2.png" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                        </div>
+                        <span class="rounded-circle border border-2 border-white btn-sm-square text-white position-absolute"
+                          style="top: 10%; right: -10px;">1</span>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div class="features-content d-flex flex-column">
+                        <p class="text-uppercase mb-2"><i class="fa fa-newspaper"></i> TIN TỨC</p>
+                        <a href="/news" class="h6">
+                          Xem Thêm . . .
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                  <div class="row g-4 align-items-center features-item">
+                    <div class="col-4">
+                      <div class="rounded-circle position-relative">
+                        <div class="overflow-hidden rounded-circle">
+                          <img src="/img/icongiatri/5.png" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                        </div>
+                        <span class="rounded-circle border border-2 border-white btn-sm-square text-white position-absolute"
+                          style="top: 10%; right: -10px;">2</span>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div class="features-content d-flex flex-column">
+                        <p class="text-uppercase mb-2"><i class="fas fa-cube"></i> BLOCKCHAIN</p>
+                        <a href="/blockchain" class="h6">
+                          Xem Thêm . . .
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                  <div class="row g-4 align-items-center features-item">
+                    <div class="col-4">
+                      <div class="rounded-circle position-relative">
+                        <div class="overflow-hidden rounded-circle">
+                          <img src="/img/icongiatri/6.png" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                        </div>
+                        <span class="rounded-circle border border-2 border-white btn-sm-square text-white position-absolute"
+                          style="top: 10%; right: -10px;">3</span>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div class="features-content d-flex flex-column">
+                        <p class="text-uppercase mb-2"><i class="fab fa-btc"></i> CRYPTO</p>
+                        <a href="/crypto" class="h6">
+                          Xem Thêm . . .
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                  <div class="row g-4 align-items-center features-item">
+                    <div class="col-4">
+                      <div class="rounded-circle position-relative">
+                        <div class="overflow-hidden rounded-circle">
+                          <img src="/img/icongiatri/4.png" class="img-zoomin img-fluid rounded-circle w-100" alt="">
+                        </div>
+                        <span class="rounded-circle border border-2 border-white btn-sm-square text-white position-absolute"
+                          style="top: 10%; right: -10px;">4</span>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div class="features-content d-flex flex-column">
+                        <p class="text-uppercase mb-2"><i class="fa fa-money-bill-alt"></i> TÀI CHÍNH</p>
+                        <a href="/finance" class="h6">
+                          Xem Thêm . . .
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Features End -->
+
+        <canvas></canvas>
+        <canvas></canvas>
+
+
+        <div class="container-xxl py-5">
+            <br>
+            <br>
+            <div class="row" id="main">
+                <div class="col-md-4 well" id="leftPanel">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+                                <img id="profileImage" src="<%= user.avatar == null ? '/img/user/user.jpg' : user.avatar %>" alt="" width="200" height="200"
+                                    class="img-circle img-thumbnail">
+                                <h2 class="text-white"><%= user.name %></h2>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-warning"
+                                        onclick="document.getElementById('fileInput').click();">
+                                        THAY ẢNH ĐẠI DIỆN
+                                    </button>
+                                    <input type="file" id="fileInput" style="display:none;" accept="image/*"
+                                        onchange="updateProfileImage(event)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 well" id="rightPanel">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form role="form">
+                                <h2 class="text-white"><i class="fa fa-user"></i> Chỉnh sửa Thông Tin Cá Nhân</h2>
+                                <hr class="colorgraph">
+                                <div class="form-group">
+                                  <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4" value="<%= user.email %>" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="name" id="name" class="form-control input-lg" placeholder="Name" tabindex="4" value="<%= user.name %>">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="phone" id="phone" class="form-control input-lg" placeholder="Phone Number" tabindex="4" value="<%= user.phone %>">
+                                </div>
+                                
+                                <hr class="colorgraph">
+                                <div style="position: relative; width: 100%; height: 3vh; margin-bottom: 20px;">
+                                  <div id="successMessage" style="display: none; color: green; font-size: 40px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap;">
+                                  </div>
+                                  <div id="errorMessage" style="display:none; color:red; font-size: 40px;; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6 offset-md-3 d-flex justify-content-between">
+                                        <button type="button" class="btn btn-warning btn-lg" style="margin-right: 10px;"
+                                        id="changePasswordButton">THAY ĐỔI MẬT
+                                            KHẨU</button>
+                                        <a class="btn btn-success btn-lg" onclick="updateInformation()">LƯU THÔNG TIN MỚI</a>
+
+                                    </div>
+                                </div>
+
+                            </form>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog"
+                                aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="changePasswordModalLabel"><i
+                                                    class="fas fa-lock"></i>
+                                                Thay Đổi Mật Khẩu</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="changePasswordForm">
+                                                <div class="form-group">
+                                                    <label for="oldPassword">Nhập mật khẩu cũ</label>
+                                                    <div class="input-group">
+                                                        <input type="password" class="form-control" id="oldPassword"
+                                                            placeholder="Nhập mật khẩu cũ">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-secondary toggle-password"
+                                                                type="button"><i class="fa fa-eye"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="newPassword">Nhập Mật khẩu mới</label>
+                                                    <div class="input-group">
+                                                        <input type="password" class="form-control" id="newPassword"
+                                                            placeholder="Nhập Mật khẩu mới">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-secondary toggle-password"
+                                                                type="button"><i class="fa fa-eye"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="confirmNewPassword">Nhập Lại mật khẩu mới</label>
+                                                    <div class="input-group">
+                                                        <input type="password" class="form-control"
+                                                            id="confirmNewPassword" placeholder="Nhập Lại mật khẩu mới">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-secondary toggle-password"
+                                                                type="button"><i class="fa fa-eye"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="position: relative; width: 100%; height: 7vh;">
+                                                  <div id="errorPassword" style="display:none; color:red; font-size: 35px;; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap;"></div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                id="closeModalPassword">Đóng</button>
+                                            <button type="button" class="btn btn-primary"
+                                                onclick="saveNewPassword()">Lưu Mật Khẩu Mới</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="mb-1 title-gradient3">Liên hệ Với Chúng Tôi
+            </h1>
+            <h6 class="section-title text-center text-primary px-3" style="margin-top: -40px;"></h6>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h5 class="text-white">Về Chúng Tôi</h5>
+                <p class="mb-4">Chúng tôi hướng đến một Việt Nam hiện đại và bền vững, nơi mà Chuyển đổi Số và
+                    Chuyển đổi
+                    Xanh không chỉ là xu hướng mà còn là nền tảng cho sự phồn thịnh của quốc gia.</p>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="conbut d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                        style="width: 50px; height: 50px;">
+                        <i class="fa fa-map-marker-alt text-white"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="text-white">Địa Chỉ</h5>
+                        <p class="mb-0">27 Hoàng Hoa Thám, Phường 6,
+                            Quận Bình Thạnh, Thành Phố Hồ Chí Minh</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="conbut d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                        style="width: 50px; height: 50px;">
+                        <i class="fa fa-phone-alt text-white"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="text-white">Số Điện Thoại</h5>
+                        <p class="mb-0">
+                            033 212 0339
+                            <br>
+                            086 864 6332
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="conbut d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
+                        style="width: 50px; height: 50px;">
+                        <i class="fa fa-envelope-open text-white"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="text-white">Gửi Mail</h5>
+                        <p class="mb-0">giaiphapnentangsovn@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <iframe class="position-relative rounded w-100 h-100"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1014827502626!2d106.7023093153348!3d10.80251376166725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529293ea53c67%3A0x9c7fba49a75c4c2b!2zMjcgw4JxIFbEg25oIELDoG4sIFBoxrDhu51uZyA2LCBCw6xuaCBUaOG6pW5oLCBUaOG6pW5oIFBow7osIEhvw6AgQ2jDrW5oIE1pbmg!5e0!3m2!1sen!2svn!4v1688412854563!5m2!1sen!2svn"
+                    frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+            <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Họ Và Tên của Bạn">
+                                <label for="name">Họ Và Tên của Bạn</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="Email của Bạn">
+                                <label for="email">Email của Bạn</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="subject" placeholder="Tiêu Đề">
+                                <label for="subject">Tiêu Đề</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Để lại tin nhắn ở đây" id="message"
+                                    style="height: 150px"></textarea>
+                                <label for="message">Mô Tả</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3 submit" type="submit">GỬI TIN NHẮN</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <footer class="footer-section">
+        <div class="container-xxl">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Địa Chỉ</h4>
+                                <span>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=27+Hoang+Hoa+Tham,+Phuong+6,+Quan+Binh+Thanh,+Ho+Chi+Minh+City"
+                                        target="_blank">
+                                        27 Hoàng Hoa Thám, Phường 6,
+                                        <br>Quận Bình Thạnh, Thành Phố Hồ Chí Minh
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Liên Hệ</h4>
+                                <span><a href="tel:+840332120339">033 212 0339</a></span>
+                                <span><a href="tel:+840868646332">086 864 6332</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Gửi Mail</h4>
+                                <span><a
+                                        href="mailto:giaiphapnentangsovn@gmail.com">giaiphapnentangsovn@gmail.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="https://blockchainvietnam.online/"><img
+                                        src="/img/logo/logo-doc-4330-copy-9044.png" class="img-fluid" alt="logo">
+                                </a>
+                            </div>
+                            <div class="footer-text">
+                                <p> Chào mừng bạn đến với Tạp chí Blockchain Việt Nam, nguồn thông tin hàng đầu về
+                                    công nghệ
+                                    Blockchain tại Việt Nam. Chúng tôi cung cấp những bài viết chất lượng, phân tích
+                                    chuyên sâu và tin
+                                    tức mới nhất về thị trường Blockchain. Đồng hành cùng cộng đồng với sự đổi mới,
+                                    phát triển và ứng
+                                    dụng Blockchain trong nền kinh tế số Việt Nam.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Các đường liên kết khác</h3>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="/news"><i class="fa fa-newspaper"></i>
+                                        Tin Tức</a>
+                                </li>
+                                <li>
+                                    <a href="/blockchain"><i class="fas fa-cube"></i>
+                                        Blockchain</a>
+                                </li>
+                                <li>
+                                    <a href="/crypto"><i class="fab fa-btc"></i>
+                                        Crypto</a>
+                                </li>
+                                <li>
+                                    <a href="/finance"><i class="fa fa-money-bill-alt"></i>
+                                        Tài Chính</a>
+                                </li>
+                                <li>
+                                    <a href="/event"><i class="fa fa-calendar-alt"></i>
+                                        Sự Kiện</a>
+                                </li>
+                                <li>
+                                    <a href="/contact"><i class="fa fa-envelope"></i>
+                                        Liên Hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Theo Dõi</h3>
+                                <div class="footer-social-icon py-2">
+                                    <a href="https://www.facebook.com/blockchainvietnam.vn" target="_blank"><img
+                                            src="/img/icon/gra2f (1).png" /></a>
+                                    <a href="https://t.me/carboncreditsvn" target="_blank"><img
+                                            src="/img/icon/gra2f (2).png" /></a>
+                                </div>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Đừng quên theo dõi những bài viết mới của chúng tôi, gửi email tại đây.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Địa Chỉ Email . . .">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2024, All Right Reserved <a href="">VDS - Vietnam Digital
+                                    Solutions</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">All Service</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+        <button class="btn btn-primary" title="Back to Top">
+            <i class="fa fa-angle-double-up"></i>
+        </button>
+    </div>
+
+
+    <!-- Javascript Files
+================================================== -->
+
+    <!-- initialize jQuery Library -->
+    <script src="/plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap jQuery -->
+    <script src="/plugins/bootstrap/bootstrap.min.js" defer></script>
+    <!-- Slick Carousel -->
+    <script src="/plugins/slick/slick.min.js"></script>
+    <script src="/plugins/slick/slick-animation.min.js"></script>
+    <!-- Color box -->
+    <script src="/plugins/colorbox/jquery.colorbox.js"></script>
+    <!-- shuffle -->
+    <script src="/plugins/shuffle/shuffle.min.js" defer></script>
+
+
+    <!-- Google Map API Key-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+    <!-- Google Map Plugin-->
+    <script src="/plugins/google-map/map.js" defer></script>
+
+
+    <!-- Template custom -->
+    <script src="/js/script.js"></script>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script src="/js/new.js"></script>
+    <script src="/js/bgback.js"></script>
+
+    <script src="/js/date.js"></script>
+
+    <script src="/js/security.js"></script>
+
+    <script src="/js/account/account.js"></script>
+
+
+    </div><!-- Body inner end -->
+</body>
+
+</html>

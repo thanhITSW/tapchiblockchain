@@ -1,0 +1,28 @@
+$('#logo-carousel').owlCarousel({
+    loop:true,
+    margin:30,
+    dots:true,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    nav: false,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            loop:false
+        },
+        1200:{
+            items:6,
+            loop:false
+        }
+    }
+})

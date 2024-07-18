@@ -2,11 +2,17 @@ const express = require('express')
 const mongoose = require('mongoose')
 require('dotenv').config()
 const cors = require('cors')
-//const session = require('express-session')
+const session = require('express-session')
 const bodyParser = require('body-parser');
-//const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser')
+const flash = require('express-flash')
 
 const app = express()
+
+app.use(cookieParser('vds'));
+app.use(session({ cookie: { maxAge: 12000000 } })); //2h
+app.use(flash());
+
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));

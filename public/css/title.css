@@ -1,0 +1,162 @@
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.title-gradient {
+    background: linear-gradient(45deg, #28a745, #134a02, #28a745);
+    background-size: 300%;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 5s infinite linear;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title-gradient2 {
+    background: linear-gradient(45deg, #28a745, #dccb35);
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-gradient3 {
+    background: linear-gradient(45deg, #ffe600, #fdfffc, #ffe600);
+    background-size: 300%;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 5s infinite linear;
+}
+
+.title-gradient4 {
+    background: linear-gradient(45deg,#134a02, #4effc1, #134a02, #eaff80);
+    background-size: 300%;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 5s infinite linear;
+}
+
+.title-gradient5 {
+    background: linear-gradient(45deg, #35d4dc, #fdfffc, #dccb35);
+    background-size: 300%;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 5s infinite linear;
+}
+
+
+@media (max-width:360px) {
+    .title-gradient{
+        text-align: center;
+        padding: 0px 15px 6px 15px;
+
+    }
+}
+
+@media (min-width:390px) and (max-width:600px) {
+    .title-gradient {
+        text-align: center;
+        padding: 0px 28px 6px 28px;
+        /* top right bottom left */
+    }
+
+    .title-gradient3 {
+        padding: 0 20px 0 20px;
+    }
+}
+
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+}
+
+.section-title .h1 {
+    margin-left: -1em;
+    font-size: 1.5em;
+}
+
+/* @media (max-width:600px) {
+    .section-title .h1 {
+        display:none;
+
+    }
+
+    .section-title::before {
+        display:none;
+    }
+    
+    .section-title::after {
+        display:none;
+
+    }
+} */
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #ffe70e;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    bottom: -13px;
+    left: calc(25% - 13px);
+    background: var(--dark);
+    border: 10px solid #FFFFFF;
+    border-radius: 28px;
+}
+
+
+.section-title.text-center::before {
+    left: 25%;
+}
+
+.section-title.text-center::after {
+    left: calc(50% - 13px);
+}
+
+/* hr{
+    background:#1c1212;
+    border: 1px solid #1c1212;
+    border-radius: 10px;
+    margin: 10px 0 20px;
+} */
+
+.custom-hr {
+    border: none; /* Loại bỏ đường viền mặc định */
+    height: 10px; /* Chiều cao của hr */
+    width: 100%; /* Chiều rộng của hr */
+    background-image: url('https://i.pinimg.com/474x/87/d7/7a/87d77ac8d53b00e408cd26e7f974979f.jpg'); /* Đường dẫn đến ảnh */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    background-position: center; /* Đặt ảnh ở trung tâm */
+    background-size: contain; /* Điều chỉnh kích thước ảnh để vừa với hr */
+    margin: 20px auto; /* Căn giữa và tạo khoảng cách phía trên và dưới */
+}
+
+

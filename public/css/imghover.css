@@ -1,0 +1,52 @@
+/* Drop shadow for images and text */
+.image-class {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-class {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effects */
+.image-class:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.text-class:hover {
+    color: #00aaff;
+    transition: color 0.3s ease;
+}
+
+/* Gradient overlay */
+.image-class::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent);
+}
+
+/* Borders and padding */
+.container-class {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.image-class,
+.text-class {
+    animation: fadeIn 1s ease-in-out;
+}
