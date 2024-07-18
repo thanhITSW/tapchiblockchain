@@ -869,7 +869,7 @@ canvas {
 
 .container-fluid.py-1.blog .bloggimg img {
     width: 100%;
-    /* max-width: 600px; */
+    max-width: 600px;
     /* Chiều rộng mặc định là 100% của phần tử chứa */
     height: 400px;
     /* Chiều cao tự động dựa trên tỷ lệ */
