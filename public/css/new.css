@@ -860,6 +860,17 @@ canvas {
 .container-fluid.py-1.blog .bloggimg {
     letter-spacing: 2px;
     background: linear-gradient(rgb(243, 244, 242, ), rgba(225, 228, 224, 0.4));
+    color: white;
+}
+
+.container-fluid.py-1.blog .bloggimg p,
+.container-fluid.py-1.blog .bloggimg h1,
+.container-fluid.py-1.blog .bloggimg h2,
+.container-fluid.py-1.blog .bloggimg h3,
+.container-fluid.py-1.blog .bloggimg h4,
+.container-fluid.py-1.blog .bloggimg h5,
+.container-fluid.py-1.blog .bloggimg h6 {
+    color: white;
 }
 
 .container-fluid.py-1.blog .bloggimg p {
