@@ -9,7 +9,7 @@
   <meta property="og:image" content="/img/logoct/lglink.png">
   <meta property="og:url" content="https://blockchainvietnam.online">
   <title>TẠP CHÍ BLOCKCHAIN VIỆT NAM</title>
-  <!-- <link rel="shortcut icon" href="./img/logo/logo.png" type="image/x-icon" id="pageTitle"> -->
+  <link rel="shortcut icon" href="/img/logo/logo.png" type="image/x-icon" id="pageTitle">
 
   <!-- CSS
 ================================================== -->
@@ -389,7 +389,7 @@
             <h1 class="mb-4 text-white">Thông tin chính xác, tin tức nóng hổi - Cập nhật liên tục suốt 24
               giờ</h1>
             <div class="position-relative mx-auto">
-              <input class="form-control w-100 py-3 rounded-pill" type="email" placeholder="Email Công Ty của Bạn">
+              <input class="form-control w-100 py-3 rounded-pill" type="email" placeholder="Email Công Ty của Bạn" id="emailCT">
               <button type="submit" class="btn btn-primary py-2 px-5 position-absolute rounded-pill text-white h-100"
                 style="top: 0; right: 0; padding:10px; font-weight: bold;">Theo Dõi Ngay</button>
             </div>
@@ -843,14 +843,14 @@
             <div class="row g-3">
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="name" placeholder="Họ Và Tên của Bạn">
-                  <label for="name">Họ Và Tên của Bạn</label>
+                  <input type="text" class="form-control" id="nameT" placeholder="Họ Và Tên của Bạn" name="nameT">
+                  <label for="nameT">Họ Và Tên của Bạn</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="email" class="form-control" id="email" placeholder="Email của Bạn">
-                  <label for="email">Email của Bạn</label>
+                  <input type="email" class="form-control" id="emailT" placeholder="Email của Bạn" name="emailT">
+                  <label for="emailT">Email của Bạn</label>
                 </div>
               </div>
               <div class="col-12">
@@ -987,10 +987,8 @@
                   <p>Đừng quên theo dõi những bài viết mới của chúng tôi, gửi email tại đây.</p>
                 </div>
                 <div class="subscribe-form">
-                  <form action="#">
-                    <input type="text" placeholder="Địa Chỉ Email . . .">
+                    <input type="text" placeholder="Địa Chỉ Email . . ." id="dcEmail">
                     <button><i class="fab fa-telegram-plane"></i></button>
-                  </form>
                 </div>
               </div>
 

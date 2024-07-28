@@ -9,7 +9,7 @@
     <meta property="og:image" content="<%= topic.banner %>">
     <meta property="og:url" content="https://blockchainvietnam.online/">
     <title>TẠP CHÍ BLOCKCHAIN VIỆT NAM</title>
-    <!-- <link rel="shortcut icon" href="../img/logo/logo.png" type="image/x-icon" id="pageTitle"> -->
+    <link rel="shortcut icon" href="/img/logo/logo.png" type="image/x-icon" id="pageTitle">
 
     <!-- CSS
 ================================================== -->
@@ -321,10 +321,10 @@
                                     
                                     <% if(user.length === undefined) {%>
                                         <div class="col-lg-6">
-                                            <input type="text" class="form-control py-3" placeholder="Họ và Tên" name="name" required>
+                                            <input type="text" class="form-control py-3" placeholder="Họ và Tên" name="name" required id="name">
                                         </div>
                                         <div class="col-lg-6">
-                                            <input type="email" class="form-control py-3" placeholder="Địa chỉ Email" name="email" required>
+                                            <input type="email" class="form-control py-3" placeholder="Địa chỉ Email" name="email" required id="email">
                                         </div>
                                     <% } %>
                                     <div class="col-12">
@@ -455,14 +455,14 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Họ Và Tên của Bạn">
-                                    <label for="name">Họ Và Tên của Bạn</label>
+                                    <input type="text" class="form-control" id="nameT" placeholder="Họ Và Tên của Bạn" name="nameT">
+                                    <label for="nameT">Họ Và Tên của Bạn</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Email của Bạn">
-                                    <label for="email">Email của Bạn</label>
+                                    <input type="email" class="form-control" id="emailT" placeholder="Email của Bạn" name="emailT">
+                                    <label for="emailT">Email của Bạn</label>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -601,10 +601,8 @@
                                     <p>Đừng quên theo dõi những bài viết mới của chúng tôi, gửi email tại đây.</p>
                                 </div>
                                 <div class="subscribe-form">
-                                    <form action="#">
-                                        <input type="text" placeholder="Địa Chỉ Email . . .">
+                                        <input type="text" placeholder="Địa Chỉ Email . . ." id="dcEmail">
                                         <button><i class="fab fa-telegram-plane"></i></button>
-                                    </form>
                                 </div>
                             </div>
 

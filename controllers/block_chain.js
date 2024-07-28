@@ -12,7 +12,7 @@ module.exports.get_all = (req, res) => {
     const url = process.env.API_KEY + '/webblockchain' + genSign({company: 'vds'})
     axios.get(url)
         .then(response => {
-            topics = response.data.result
+            topics = response.data.result || {}
             let topicTime = topics.map(topic => {
                 const dateParts = topic.time.split('/');
                 const yyyyMMdd = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
@@ -23,13 +23,13 @@ module.exports.get_all = (req, res) => {
                 return new Date(b.time) - new Date(a.time);
             });
             let topicView = topics.sort((a, b) => b.view - a.view)
-            let firstTopicTime = topicTime[0]
-            let secondTopicTime = topicTime[1]
-            let firstTopicView = topicView[0]
-            let topicTinTuc = topicTime.filter(topic => topic.category === 'tintuc');
-            let topicBlockChain = topicTime.filter(topic => topic.category === 'blockchain');
-            let topicCrypto = topicTime.filter(topic => topic.category === 'crypto');
-            let topicTaiChinh = topicTime.filter(topic => topic.category === 'taichinh');
+            let firstTopicTime = topicTime[0] || {}
+            let secondTopicTime = topicTime[1] || {}
+            let firstTopicView = topicView[0] || {}
+            let topicTinTuc = topicTime.filter(topic => topic.category === 'tintuc') || {};
+            let topicBlockChain = topicTime.filter(topic => topic.category === 'blockchain') || {};
+            let topicCrypto = topicTime.filter(topic => topic.category === 'crypto') || {};
+            let topicTaiChinh = topicTime.filter(topic => topic.category === 'taichinh') || {};
             res.render('home', {firstTopicTime, secondTopicTime, firstTopicView, topicTinTuc, topicBlockChain, topicCrypto, topicTaiChinh, topicTime, user})
         })
         .catch(error => {
@@ -46,7 +46,7 @@ module.exports.get_detail = (req, res) => {
             topic = response.data.topic || {}
             axios.get(url + genSign({company: 'vds'}))
                 .then(response => {
-                    topics = response.data.result
+                    topics = response.data.result || {}
                     let topicTime = topics.map(topic => {
                         const dateParts = topic.time.split('/');
                         const yyyyMMdd = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
