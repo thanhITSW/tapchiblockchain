@@ -111,6 +111,7 @@ module.exports.postLogin = async (req, res) => {
         }
     }
     catch(e){
+        console.error(e)
         return res.redirect('/login')
     }
 }
@@ -254,6 +255,7 @@ module.exports.postRegister = async (req, res) => {
         }
     }
     catch(e){
+        console.error(e)
         return res.redirect('/register')
     }
 }
@@ -317,7 +319,7 @@ module.exports.changeInformation = async (req, res) => {
         }
 
     } catch (error) {
-        res.json({ code: 1, message: 'Failed to update user', error: err.message });
+        console.error(error);
     }
 }
 
@@ -343,6 +345,6 @@ module.exports.changePassword = async (req, res) => {
         }
     })
     .catch(err => {
-        res.json({ code: 1, message: 'Failed to update password', error: err.message });
+        console.error(err);
     })
 }

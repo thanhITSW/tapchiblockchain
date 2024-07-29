@@ -73,4 +73,7 @@ function shareToFacebook(){
         window.open(facebookShareUrl, '_blank');
         return response.json();
     })
+    .catch(error => {
+        console.error('Error submitting form:', error);
+    });
 }
